@@ -1,0 +1,270 @@
+/* Reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Font */
+
+/* @font-face {
+  font-family: "font";
+  src: url("font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  margin: 0;
+  font-family: sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bg,
+#bg2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bg {
+  background-image: url(../img/1.jpg);
+}
+#bg2 {
+  background-image: url(../img/2.jpg);
+}
+.ass,
+.info {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: 0.35s;
+}
+.ass > a,
+.info > a,
+.plus {
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  width: 100vw;
+  text-align: center;
+  transition: all 0.35s;
+  padding: 15px;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,
+    -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+@media (min-width: 667px) {
+  .ass > a,
+  .info > a,
+  .plus {
+    font-size: 50px;
+  }
+  .info br {
+    display: none;
+  }
+}
+.ass a.bc:hover {
+  background-color: teal;
+}
+.ass a.yt:hover {
+  background-color: red;
+}
+.ass a.ig:hover {
+  background-color: salmon;
+}
+.ass a.fb:hover {
+  background-color: cornflowerblue;
+}
+.ass a.sc:hover {
+  background-color: darkorange;
+}
+.info a:hover {
+  background-color: black;
+}
+
+.contact #bg2 {
+  z-index: 1;
+}
+.contact .ass {
+  display: none;
+}
+.contact .info {
+  display: flex;
+}
+.info {
+  display: none;
+}
+.plus {
+  position: fixed;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 15px;
+  width: auto;
+}
+.plus.bottom {
+  bottom: 10vh;
+}
+.plus.bottom span {
+  padding-right: 2px;
+}
+.plus.top {
+  top: 10vh;
+}
+.plus.top span {
+  transform: rotateZ(180deg);
+  display: inline-block;
+  padding-left: 2px;
+}
+.plus:hover {
+  color: khaki;
+}

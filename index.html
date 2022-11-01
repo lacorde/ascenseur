@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="MobileOptimized" content="320" />
+
+    <title>ASCENSEUR</title>
+    <meta name="title" content="ASCENSEUR" />
+    <meta
+      name="description"
+      content="Indie rock band from Montpellier, France."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ascenseur.fm/" />
+    <meta property="og:title" content="ASCENSEUR" />
+    <meta
+      property="og:description"
+      content="Indie rock band from Montpellier, France."
+    />
+
+    <meta
+      property="og:image"
+      content="https://jvles.fr/img/favicons/android-chrome-256x256.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ascenseur.fm/" />
+    <meta property="twitter:title" content="ASCENSEUR" />
+    <meta
+      property="twitter:description"
+      content="Indie rock band from Montpellier, France."
+    />
+
+    <meta
+      property="twitter:image"
+      content="https://jvles.fr/img/favicons/android-chrome-256x256.png"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicons/favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="bg2"></div>
+    <div id="bg"></div>
+    <div class="ass">
+      <a class="bc" target="_blank" href="https://ascenseur.bandcamp.com"
+        >bandcamp</a
+      >
+      <a
+        class="yt"
+        target="_blank"
+        href="https://www.youtube.com/watch?v=lBS7TnppDkU"
+        >youtube</a
+      >
+      <a class="ig" target="_blank" href="https://instagram.com/ascenseurband"
+        >instagram</a
+      >
+      <a class="fb" target="_blank" href="https://facebook.com/ascenseurband"
+        >facebook</a
+      >
+      <a class="sc" target="_blank" href="https://soundcloud.com/ascenseurband"
+        >soundcloud</a
+      >
+    </div>
+    <div class="info">
+      <a href="mailto:ascenseurband@gmail.com">ascenseurband<br />@gmail.com</a>
+      <a href="tel:0699214568">06 99 21 45 68</a>
+    </div>
+    <div class="plus top"><span>v</span><br />|</div>
+    <div class="plus bottom">|<br /><span>v</span></div>
+    <script>
+      document.querySelectorAll(".plus").forEach((item) => {
+        item.addEventListener("click", (event) => {
+          body.classList.toggle("contact");
+        });
+      });
+      var body = document.body;
+      var lastDelta = 0;
+      var MouseWheelHandler = function (e) {
+        var e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+        if (Math.abs(e.wheelDelta) > 100 && delta !== lastDelta) {
+          body.classList.toggle("contact");
+          lastDelta = delta;
+        }
+      };
+      var KeyDownHandler = function (e) {
+        if (
+          ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown"].includes(e.key)
+        ) {
+          body.classList.toggle("contact");
+        }
+      };
+      document.addEventListener("keydown", KeyDownHandler, false);
+      document.addEventListener("mousewheel", MouseWheelHandler, false);
+      document.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+    </script>
+  </body>
+</html>
